@@ -1,305 +1,383 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Saúde Mental dos Estudantes</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<meta name="description" content="Site educacional sobre saúde mental de estudantes e professores, relacionado aos ODS 3 e 4.">
+
+<title>Saúde Mental dos Estudantes</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
 
-    <header>
 
-        <nav>
+<header>
+    <nav>
 
-            <a href="#inicio" class="logo">
-                <img src="assets/Logos/Logo - site.png" alt="">
+        <a href="#inicio" class="logo" aria-label="Voltar ao início">
+            <img src="assets/Logos/Logo - site.png" alt="Logo do site">
+        </a>
+
+        <button class="menu-mobile"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu-principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul id="menu-principal">
+            <li><a href="#inicio">Início</a></li>
+            <li>
+                <a href="#conscientizacao">
+                    <b>Reportagem Conscientização</b>
+                </a>
+            </li>
+            <li><a href="#problema">Estudantes</a></li>
+            <li><a href="#ods">ODS</a></li>
+            <li><a href="#impactos">Professores</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-content">
+
+            <span>Saúde e bem-estar e Educação de Qualidade</span>
+
+            <h1>
+                Precisamos saber sobre você!
+            </h1>
+
+            <p>
+                Responda ao formulário abaixo e nos ajude a entender o que os estudantes estão passando.
+            </p>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSenednMfHTSKgzez7a-b7bCZ8WXiZFSbiVUkIs9mBLbQMeDcw/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn">
+                Preencher formulário
             </a>
 
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#conscientizacao"><b>Reportagem Conscientização</b></a></li>
-                <li><a href="#problema">Estudantes</a></li>
-                <li><a href="#ods">ODS</a></li>
-                <li><a href="#impactos">Professores</a></li>
-            </ul>
-<button class="menu-mobile" aria-label="Abrir menu">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
-
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <!-- HERO -->
-
-        <section id="inicio" class="hero">
-
-            <div class="hero-content">
-
-                <span>Saúde e bem-estar e Educação de Qualidade</span>
-
-                <h1>
-                    Precisamos saber sobre você!
-                </h1>
-
-                <p>
-                    Responda ao formulário abaixo e nos ajude a entender o que os estudantes estão passando.
-                </p>
-
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSenednMfHTSKgzez7a-b7bCZ8WXiZFSbiVUkIs9mBLbQMeDcw/formResponse?pli=1" target="_blank" class="btn">
-                    Preencher formulário
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- O PROBLEMA -->
-
-        <section id="problema" class="introducao">
-
-            <span>Os desafios sociais presentes no ambiente escolar</span>
-
-            <h2>
-                O aumento do sofrimento mental de estudantes.
-            </h2>
-  <div class="coluna">
-            <p>
-                Escrito por DCI/Unifesp
-Um estudo realizado por pesquisadores(as) da Universidade Federal de São Paulo (Unifesp) revelou um aumento significativo no sofrimento mental de estudantes de graduação entre os anos de 2017 e 2021, com um agravamento notável durante a pandemia de covid-19. O artigo, publicado recentemente na revista Avaliação/Campinas, destaca a importância de políticas de apoio psicossocial para universitários(as), especialmente aqueles(as) que foram mais suscetíveis ao sofrimento, como mulheres, pessoas com deficiência, estudantes transgêneros e trabalhadores(as).
-            </p>
-            <p><b>
-Principais resultados da pesquisa 
-            </p></b>
-            <p>
-O estudo dos pesquisadores(as) Fabricio Gobetti Leonardi, Rosemarie Andreazza e Gabriela Arantes Wagner analisou dados de 14.092 estudantes da Unifesp, coletados pela Comissão de Estudos do Perfil do Estudante de Graduação, sendo o primeiro trabalho brasileiro que descreve censitariamente o desfecho de sofrimento mental entre universitários(as) a partir de informações obtidas no período pré-pandemia e pandêmico no Brasil. Os resultados indicam que os(as) estudantes enfrentaram um aumento no sofrimento mental, com ou sem uso de psicofármacos.
-            </p>
-            <p><b> 
-                Os principais achados incluem:
-            </p></b>
-            <p>
-                Estudantes transgêneros e mulheres apresentaram os maiores índices de sofrimento mental em ambos os períodos. Antes da pandemia, estudantes trans tiveram uma chance cerca de 7 vezes maior, e mulheres 1,6 vez maior do que homens cisgênero. Durante a pandemia, a chance para estudantes trans aumentou em 16 vezes, enquanto entre mulheres permaneceu 1,6 vez maior;
-                Pessoas com deficiência também foram fortemente impactadas. Antes da pandemia, a chance de sofrimento mental foi 2,2 vezes maior sem uso de psicofármacos e 3,5 vezes maior com uso de psicofármacos. Durante a pandemia, as chances foram 1,8 vez maior sem psicofármacos e 2,1 vezes com psicofármacos;
-                A prática regular de atividade física se mostrou um fator protetor nos dois períodos. Antes da pandemia, estudantes que praticavam regularmente tiveram uma redução de 38% a 50% na chance de sofrimento mental, enquanto a prática esporádica reduziu em 23% a 42%. Durante a pandemia, a proteção aumentou, reduzindo em 36% a 49% com atividade regular e 27% a 20% com atividade esporádica;
-                Universitários(as) que trabalham apresentaram maior prevalência de sofrimento mental em ambos os períodos. Antes da pandemia, tiveram 1,3 vez mais chance de relatar sofrimento sem psicofármacos e 1,6 vez mais chance com psicofármacos. Durante a pandemia, essa chance aumentou para 1,5 vez sem psicofármacos e 1,6 vez com psicofármacos;
-                Ter filhos se mostrou um fator protetor nos dois períodos. Antes da pandemia, estudantes com filhos(as) tiveram 50% menos chance de relatar sofrimento mental. Durante a pandemia, esse efeito protetor foi ainda mais forte, reduzindo em até 71% as chances de sofrimento entre aqueles(as) que faziam uso de psicofármacos.
-            </div>
-                <div class="coluna">
-            <p>
-                Para o pesquisador Fabricio Leonardi, "os dados evidenciam que o aumento do sofrimento mental e do uso de psicofármacos entre jovens prestes a ingressar na universidade pode ter impactos diretos na trajetória acadêmica, além de representar um desafio para as instituições que os(as) receberão. Além disso, aponta para uma questão mais ampla, relacionada tanto às dificuldades vivenciadas no período pré-vestibular e à especificidade dessa fase da vida quanto ao crescimento da medicalização. Atualmente, a saúde mental é um tema mais debatido entre os(as) jovens do que em gerações anteriores, o que pode ser positivo ao fomentar discussões e incentivar a busca por apoio. No entanto, esse maior reconhecimento também pode resultar em sobrediagnoses e no uso excessivo de medicações para lidar com processos que, em muitos casos, são inerentes ao desenvolvimento juvenil".
-            </p>
-            <p><b>
-Impacto da pandemia de covid-19
-            </p></b>
-            <p>
-A pandemia de covid-19 trouxe mais desafios para a saúde mental dos(as) universitários(as). O isolamento social, as mudanças na dinâmica acadêmica e a incerteza econômica são possíveis motivos. Os dados do estudo mostram que houve um crescimento no sofrimento mental de estudantes.
-            </p>
-            <p><b> 
-Recomendações e políticas institucionais
-            </p></b>
-            <p>             
-Os(As) pesquisadores(as) defendem que as instituições de ensino superior implementem estratégias preventivas e de suporte para estudantes em sofrimento mental. As recomendações incluem:
-            </p>
-            <p>
-Ampliação e aprimoramento de serviços de atendimento psicossocial e de políticas de permanência estudantil dentro das universidades;
-Promoção de atividades físicas como estratégia de prevenção;
-Adoção de medidas que contribuam para o acolhimento de estudantes em geral, mas com ênfase no transgêneros, pessoas com deficiência e do gênero feminino;
-Desenvolvimento de políticas universitárias e de permanência estudantil que integrem aspectos acadêmicos e de saúde mental;
-Criação de estratégias junto a estudantes trabalhadores(as), para possibilitar melhores condições para conciliar estudo e trabalho.
-Sobre os(as) pesquisadores(as)
-            </p>
-            <p>
-                Fabricio Gobetti Leonardi é doutorando, enquanto Rosemarie Andreazza e Gabriela Arantes Wagner são pesquisadoras do Programa de Pós-Graduação em Saúde Coletiva da Universidade Federal de São Paulo. O estudo faz parte de um esforço maior da Unifesp para compreender e agir sobre os desafios enfrentados pelos(as) estudantes universitários(as).
-            </p>
         </div>
 
-        </section>
+    </section>
 
 
-        <!-- ODS -->
+    <!-- O PROBLEMA -->
 
-        <section id="ods" class="conteudo">
+    <section id="problema" class="introducao">
 
-            <div class="section-title">
+        <span>Os desafios sociais presentes no ambiente escolar</span>
 
-                <span>Os objetivos de desenvolvimento sustentável</span>
+        <h2>
+            O aumento do sofrimento mental de estudantes.
+        </h2>
 
-                <h2>
-                    Como esses ODS se relacionam com o tema?
-                </h2>
+        <div class="coluna">
 
-            </div>
+            <p>
+                Escrito por DCI/Unifesp
+            </p>
 
+            <p>
+                Um estudo realizado por pesquisadores(as) da Universidade Federal de São Paulo (Unifesp) revelou um aumento significativo no sofrimento mental de estudantes de graduação entre os anos de 2017 e 2021, com um agravamento notável durante a pandemia de covid-19.
+            </p>
 
-            <div class="cards">
+            <p>
+                O artigo, publicado na revista Avaliação/Campinas, destaca a importância de políticas de apoio psicossocial para universitários(as), especialmente aqueles(as) que foram mais suscetíveis ao sofrimento.
+            </p>
 
-                <article class="card">
+            <button class="ler-mais"
+                type="button"
+                aria-expanded="false">
+                Ler mais
+            </button>
 
-                    <span>ODS 03</span>
+            <div class="conteudo-extra">
 
-                    <h3>
-                        Saúde e bem-estar
-                    </h3>
+                <h3>Principais resultados da pesquisa</h3>
 
-                    <p>
-                        Promove a saúde mental e o bem-estar dos estudantes.
-Incentiva a prevenção de problemas relacionados à saúde mental.
-Busca ampliar o acesso a apoio e cuidados psicológicos.
-Contribui para um ambiente escolar mais saudável e acolhedor.
-                    </p>
+                <p>
+                    O estudo dos pesquisadores Fabricio Gobetti Leonardi, Rosemarie Andreazza e Gabriela Arantes Wagner analisou dados de 14.092 estudantes da Unifesp, coletados pela Comissão de Estudos do Perfil do Estudante de Graduação.
+                </p>
 
-                </article>
+                <p>
+                    Os resultados indicam que os estudantes enfrentaram um aumento no sofrimento mental, com ou sem uso de psicofármacos.
+                </p>
 
+                <h3>Os principais achados incluem:</h3>
 
-                <article class="card">
+                <p>
+                    Estudantes transgêneros e mulheres apresentaram os maiores índices de sofrimento mental em ambos os períodos.
+                </p>
 
-                    <span>ODS 04</span>
+                <p>
+                    Pessoas com deficiência também foram fortemente impactadas.
+                </p>
 
-                    <h3>
-                        Educação de qualidade
-                    </h3>
+                <p>
+                    A prática regular de atividade física se mostrou um fator associado a menor ocorrência de sofrimento mental nos dois períodos analisados.
+                </p>
 
-                    <p>
-                        Defende uma educação que considere também o bem-estar dos estudantes.
-           Um ambiente escolar saudável favorece a aprendizagem e a permanência dos alunos.
-Combater problemas sociais ajuda a tornar a educação mais inclusiva e igualitária.
-Valoriza espaços de ensino seguros, acolhedores e livres de discriminação.
-                    </p>
+                <p>
+                    Universitários que trabalham apresentaram maior prevalência de sofrimento mental em ambos os períodos.
+                </p>
 
-                </article>
+                <p>
+                    Ter filhos foi associado a menor ocorrência de sofrimento mental nos dois períodos.
+                </p>
 
+                <p>
+                    Para o pesquisador Fabricio Leonardi, os dados evidenciam que o aumento do sofrimento mental e do uso de psicofármacos entre jovens pode ter impactos na trajetória acadêmica e representa um desafio para as instituições de ensino.
+                </p>
 
-            </div>
+                <h3>Impacto da pandemia de covid-19</h3>
 
-        </section>
+                <p>
+                    A pandemia de covid-19 trouxe mais desafios para a saúde mental dos universitários. O isolamento social, as mudanças na dinâmica acadêmica e a incerteza econômica são possíveis fatores relacionados a esse cenário.
+                </p>
 
+                <h3>Recomendações e políticas institucionais</h3>
 
-        <!-- IMPACTOS -->
+                <p>
+                    Os pesquisadores defendem que as instituições de ensino superior implementem estratégias preventivas e de suporte para estudantes em sofrimento mental.
+                </p>
 
-        <section id="impactos" class="impactos">
+                <p>
+                    Entre as recomendações estão a ampliação dos serviços de atendimento psicossocial, políticas de permanência estudantil, promoção de atividades físicas e medidas de acolhimento para diferentes grupos de estudantes.
+                </p>
 
-            <div class="section-title">
+                <h3>Sobre os pesquisadores</h3>
 
-                <span>Professores enfrentando dificuldades com o ensino.</span>
-
-                <h2>
-                    Síndrome de burnout em professores no Brasil 
-                </h2>
-
-            </div>
-
-
-            <div class="cards">
-
-                <article class="card">
-
-                    <span>01</span>
-
-                    <h3>
-                        Pressão e sobrecarga
-                    </h3>
-
-                    <p>
-                       A grande quantidade de aulas, tarefas, cobranças e responsabilidades pode gerar estresse e esgotamento nos professores.
-                    </p>
-
-                </article>
-
-
-                <article class="card">
-
-                    <span>02</span>
-
-                    <h3>
-                        Desigualdade e vulnerabilidade
-                    </h3>
-
-                    <p>
-                       A exposição prolongada ao estresse profissional pode causar exaustão física e emocional, além de diminuir a motivação e a satisfação com o trabalho.
-                    </p>
-
-                </article>
-
-
-                <article class="card">
-
-                    <span>03</span>
-
-                    <h3>
-                        Ambiente e relações sociais
-                    </h3>
-
-                    <p>
-                        A ausência de apoio adequado, reconhecimento e boas condições de trabalho pode agravar problemas de saúde mental e dificultar a rotina dos professores.
-                    </p>
-
-                </article>
+                <p>
+                    Fabricio Gobetti Leonardi é doutorando, enquanto Rosemarie Andreazza e Gabriela Arantes Wagner são pesquisadoras do Programa de Pós-Graduação em Saúde Coletiva da Universidade Federal de São Paulo.
+                </p>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- DESTAQUE -->
+    <!-- ODS -->
 
-        <section id="conscientizacao" class="destaque">
+    <section id="ods" class="conteudo">
 
-            <span>Reportagem sobre a Saúde mental dos estudantes da ETEC PG</span>
+        <div class="section-title">
+
+            <span>Os objetivos de desenvolvimento sustentável</span>
 
             <h2>
-                Veja o vídeo abaixo:
+                Como esses ODS se relacionam com o tema?
             </h2>
 
-            <iframe width="600" height="400" src="https://www.youtube.com/embed/RS4ZzYjFZcE?list=RDRS4ZzYjFZcE" title="HINO DO VASCO DA GAMA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
 
-            <a href="#inicio" class="btn">
-                Voltar ao início
-            </a>
+        <div class="cards">
 
-        </section>
+            <article class="card">
 
+                <span>ODS 03</span>
 
-        <!-- REFERÊNCIAS -->
+                <h3>
+                    Saúde e bem-estar
+                </h3>
 
-        <section class="referencias">
+                <p>
+                    Promove a saúde mental e o bem-estar dos estudantes.
+                    Incentiva a prevenção de problemas relacionados à saúde mental.
+                    Busca ampliar o acesso a apoio e cuidados psicológicos.
+                    Contribui para um ambiente escolar mais saudável e acolhedor.
+                </p>
 
-            <div class="section-title">
-
-                <span>Fontes</span>
-
-                <h2>
-                    Fontes utilizadas para a realização das matérias.
-                </h2>
-
-            </div>
-
-            <p>UNIFESP <a href="https://portal.unifesp.br/destaques/estudo-inedito-revela-aumento-do-sofrimento-mental-de-estudantes-universitarios">https://portal.unifesp.br/destaques/estudo-inedito-revela-aumento-do-sofrimento-mental-de-estudantes-universitarios</a>
-            </p>
-            <p>PEPSIC <a href="https://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-11682017000200013">https://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-11682017000200013</a></p>        
-        </section>
-
-    </main>
+            </article>
 
 
-    <footer>
+            <article class="card">
+
+                <span>ODS 04</span>
+
+                <h3>
+                    Educação de qualidade
+                </h3>
+
+                <p>
+                    Defende uma educação que considere também o bem-estar dos estudantes.
+                    Um ambiente escolar saudável favorece a aprendizagem e a permanência dos alunos.
+                    Combater problemas sociais ajuda a tornar a educação mais inclusiva e igualitária.
+                    Valoriza espaços de ensino seguros, acolhedores e livres de discriminação.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- IMPACTOS -->
+
+    <section id="impactos" class="impactos">
+
+        <div class="section-title">
+
+            <span>Professores enfrentando dificuldades com o ensino.</span>
+
+            <h2>
+                Síndrome de burnout em professores no Brasil
+            </h2>
+
+        </div>
+
+        <div class="cards">
+
+            <article class="card">
+
+                <span>01</span>
+
+                <h3>
+                    Pressão e sobrecarga
+                </h3>
+
+                <p>
+                    A grande quantidade de aulas, tarefas, cobranças e responsabilidades pode gerar estresse e esgotamento nos professores.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <span>02</span>
+
+                <h3>
+                    Desigualdade e vulnerabilidade
+                </h3>
+
+                <p>
+                    A exposição prolongada ao estresse profissional pode causar exaustão física e emocional, além de diminuir a motivação e a satisfação com o trabalho.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <span>03</span>
+
+                <h3>
+                    Ambiente e relações sociais
+                </h3>
+
+                <p>
+                    A ausência de apoio adequado, reconhecimento e boas condições de trabalho pode agravar problemas de saúde mental e dificultar a rotina dos professores.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- DESTAQUE -->
+
+    <section id="conscientizacao" class="destaque">
+
+        <span>
+            Reportagem sobre a saúde mental dos estudantes da ETEC PG
+        </span>
+
+        <h2>
+            Veja o vídeo abaixo:
+        </h2>
+
+        <iframe
+            src="https://www.youtube.com/embed/RS4ZzYjFZcE"
+            title="Reportagem sobre saúde mental dos estudantes"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+
+        <a href="#inicio" class="btn">
+            Voltar ao início
+        </a>
+
+    </section>
+
+
+    <!-- REFERÊNCIAS -->
+
+    <section class="referencias">
+
+        <div class="section-title">
+
+            <span>Fontes</span>
+
+            <h2>
+                Fontes utilizadas para a realização das matérias.
+            </h2>
+
+        </div>
 
         <p>
-            &copy; 2026 Site publicado exclusivamente para fins educacionais
+            UNIFESP
+            <a href="https://portal.unifesp.br/destaques/estudo-inedito-revela-aumento-do-sofrimento-mental-de-estudantes-universitarios"
+                target="_blank"
+                rel="noopener noreferrer">
+                Estudo inédito revela aumento do sofrimento mental de estudantes universitários
+            </a>
         </p>
 
-    </footer>
+        <p>
+            PEPSIC
+            <a href="https://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1677-11682017000200013"
+                target="_blank"
+                rel="noopener noreferrer">
+                Artigo científico
+            </a>
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        &copy; 2026 Site publicado exclusivamente para fins educacionais
+    </p>
+
+</footer>
+
+
 <script src="js/script.js"></script>
+<script src="js/btnlermais.js"></script>
+
+
 </body>
 
 </html>
