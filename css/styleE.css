@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+:root {
+    --fundo: #121A18;
+    --fundo-secundario: #1B2722;
+    --card: #24312B;
+    --texto: #F1F3EF;
+    --texto-secundario: #B7C1BA;
+    --ods3: #C6192D;
+    --ods4: #4C9F38;
+    --borda: #34423B;
+    --raio: 16px;
+}
+/* =========================================================
+   RESET
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    font-family: inherit;
+}
+/* =========================================================
+   HEADER
+========================================================= */
+header {
+    width: 100%;
+    padding: 20px 7%;
+    background-color: rgba(18, 26, 24, 0.92);
+    border-bottom: 1px solid var(--borda);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header img {
+    width: 200px;
+    display: block;
+}
+/* =========================================================
+   MENU DESKTOP
+========================================================= */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+nav li a {
+    color: var(--texto-secundario);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+nav li a:hover {
+    color: var(--texto);
+}
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+.menu-mobile {
+    display: none;
+}
+/* =========================================================
+   CABEÇALHO DA MATÉRIA
+========================================================= */
+.artigo-header {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 7% 70px;
+    border-bottom: 1px solid var(--borda);
+}
+.artigo-header-conteudo {
+    max-width: 900px;
+}
+.categoria,
+.rotulo {
+    display: block;
+    color: var(--ods4);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.artigo-header h1 {
+    max-width: 900px;
+    margin: 20px 0 25px;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    letter-spacing: -2px;
+}
+.subtitulo {
+    max-width: 760px;
+    color: var(--texto-secundario);
+    font-size: 1.15rem;
+}
+/* =========================================================
+   ARTIGO
+========================================================= */
+.artigo {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 7%;
+}
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+.artigo-introducao {
+    max-width: 800px;
+    margin: auto;
+    padding: 70px 0;
+}
+.artigo-introducao p {
+    margin-bottom: 22px;
+    font-size: 1.08rem;
+    color: var(--texto);
+}
+.artigo-introducao p:last-child {
+    margin-bottom: 0;
+}
+/* =========================================================
+   SEÇÕES DA MATÉRIA
+========================================================= */
+.artigo-secao {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 35px;
+    padding: 75px 0;
+}
+.numero-secao {
+    padding-top: 8px;
+    color: var(--ods3);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.conteudo-secao {
+    max-width: 800px;
+}
+.conteudo-secao .rotulo {
+    margin-bottom: 15px;
+}
+.conteudo-secao h2 {
+    margin-bottom: 30px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: -1px;
+}
+.conteudo-secao p {
+    margin-bottom: 22px;
+    color: var(--texto-secundario);
+    font-size: 1.03rem;
+}
+.conteudo-secao strong {
+    color: var(--texto);
+    font-weight: 700;
+}
+.conteudo-secao em {
+    color: var(--texto);
+}
+/* =========================================================
+   DESTAQUE DE DADOS
+========================================================= */
+.destaque-dado {
+    margin: 45px 0;
+    padding: 30px 35px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--fundo-secundario);
+    border-left: 3px solid var(--ods4);
+}
+.destaque-dado strong {
+    flex-shrink: 0;
+    color: var(--ods4);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1;
+}
+.destaque-dado span {
+    max-width: 450px;
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+}
+/* =========================================================
+   NOTA DO ESTUDO
+========================================================= */
+.nota-estudo {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borda);
+}
+.nota-estudo span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--texto-secundario);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+.nota-estudo p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+/* =========================================================
+   CITAÇÃO
+========================================================= */
+blockquote {
+    margin: 45px 0;
+    padding: 25px 30px;
+    border-left: 3px solid var(--ods3);
+    color: var(--texto);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+/* =========================================================
+   SEPARADOR
+========================================================= */
+.separador {
+    width: 100%;
+    height: 1px;
+    background-color: var(--borda);
+}
+/* =========================================================
+   INTERVENÇÕES
+========================================================= */
+.intervencoes {
+    margin: 70px 0;
+    padding: 60px;
+    background-color: var(--fundo-secundario);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+}
+.intervencoes-header {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+.intervencoes-header h2 {
+    margin-top: 15px;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+.intervencoes-conteudo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--borda);
+    border-left: 1px solid var(--borda);
+}
+.intervencoes-conteudo > div {
+    padding: 30px;
+    border-right: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+}
+.intervencoes-conteudo span {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--ods4);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.intervencoes-conteudo h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+.intervencoes-conteudo p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+}
+/* =========================================================
+   CONCLUSÃO
+========================================================= */
+.artigo-conclusao {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 60px 0;
+    border-top: 2px solid var(--ods3);
+    border-bottom: 1px solid var(--borda);
+}
+.artigo-conclusao .rotulo {
+    color: var(--ods3);
+    margin-bottom: 20px;
+}
+.artigo-conclusao h2 {
+    margin-bottom: 30px;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    letter-spacing: -1px;
+}
+.artigo-conclusao p {
+    margin-bottom: 20px;
+    color: var(--texto-secundario);
+    font-size: 1rem;
+}
+.artigo-conclusao p:last-child {
+    margin-bottom: 0;
+}
+/* =========================================================
+   FONTES
+========================================================= */
+.fontes {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 0 100px;
+}
+.fontes-header {
+    margin-bottom: 40px;
+}
+.fontes-header h2 {
+    margin-top: 15px;
+    font-size: 2rem;
+}
+.fonte {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 20px;
+    padding: 25px 0;
+    border-top: 1px solid var(--borda);
+}
+.fonte > span {
+    color: var(--ods3);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.fonte h3 {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+.fonte p {
+    margin-bottom: 10px;
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+}
+.fonte a {
+    color: var(--ods4);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.fonte a:hover {
+    color: var(--texto);
+}
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+    padding: 35px 7%;
+    background-color: #0D1311;
+    border-top: 1px solid var(--borda);
+}
+footer p {
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+}
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+@media (max-width: 800px) {
+    /* HEADER */
+    header {
+        padding: 18px 7%;
+        position: static;
+        backdrop-filter: none;
+    }
+    nav {
+        justify-content: space-between;
+    }
+    header img {
+        width: 180px;
+    }
+    /* BOTÃO MOBILE */
+    .menu-mobile {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        background-color: var(--card);
+        border: 1px solid var(--borda);
+        border-radius: 10px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+    .menu-mobile span {
+        position: absolute;
+        width: 24px;
+        height: 3px;
+        background-color: var(--texto);
+        border-radius: 5px;
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+    .menu-mobile span:nth-child(1) {
+        transform: translateY(-7px);
+    }
+    .menu-mobile span:nth-child(2) {
+        transform: translateY(0);
+    }
+    .menu-mobile span:nth-child(3) {
+        transform: translateY(7px);
+    }
+    .menu-mobile.menu-aberto span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .menu-mobile.menu-aberto span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-mobile.menu-aberto span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    /* MENU */
+    nav ul {
+        position: fixed;
+        top: 85px;
+        right: 20px;
+        width: 250px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        background-color: var(--fundo-secundario);
+        border: 1px solid var(--borda);
+        border-radius: 12px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0.3s;
+        z-index: 9998;
+    }
+    nav ul.menu-aberto {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    /* CABEÇALHO DA MATÉRIA */
+    .artigo-header {
+        padding: 70px 7% 55px;
+    }
+    .artigo-header h1 {
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+    .subtitulo {
+        font-size: 1rem;
+    }
+    /* ARTIGO */
+    .artigo {
+        padding: 0 7%;
+    }
+    /* INTRODUÇÃO */
+    .artigo-introducao {
+        padding: 55px 0;
+    }
+    /* SEÇÕES */
+    .artigo-secao {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 60px 0;
+    }
+    .numero-secao {
+        padding: 0;
+    }
+    .conteudo-secao h2 {
+        font-size: 2.2rem;
+    }
+    /* DESTAQUE */
+    .destaque-dado {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+    }
+    /* INTERVENÇÕES */
+    .intervencoes {
+        margin: 50px 0;
+        padding: 35px 25px;
+    }
+    .intervencoes-conteudo {
+        grid-template-columns: 1fr;
+    }
+    /* CONCLUSÃO */
+    .artigo-conclusao {
+        margin: 70px auto;
+        padding: 45px 0;
+    }
+    .artigo-conclusao h2 {
+        font-size: 2.3rem;
+    }
+    /* FONTES */
+    .fontes {
+        padding-bottom: 70px;
+    }
+}
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+@media (max-width: 500px) {
+    header {
+        padding: 15px 5%;
+    }
+    header img {
+        width: 170px;
+    }
+    .artigo-header {
+        padding: 55px 7% 45px;
+    }
+    .artigo-header h1 {
+        font-size: 2.4rem;
+    }
+    .artigo {
+        padding: 0 7%;
+    }
+    .artigo-introducao {
+        padding: 45px 0;
+    }
+    .artigo-introducao p {
+        font-size: 1rem;
+    }
+    .artigo-secao {
+        padding: 50px 0;
+    }
+    .conteudo-secao h2 {
+        font-size: 1.9rem;
+    }
+    .conteudo-secao p {
+        font-size: 0.95rem;
+    }
+    .destaque-dado strong {
+        font-size: 2.8rem;
+    }
+    .intervencoes {
+        padding: 30px 20px;
+    }
+    .intervencoes-header h2 {
+        font-size: 2rem;
+    }
+    .artigo-conclusao h2 {
+        font-size: 2rem;
+    }
+    .fonte {
+        grid-template-columns: 35px 1fr;
+        gap: 10px;
+    }
+    footer {
+        padding: 30px 7%;
+    }
+}
+/* =========================================================
+   BOTÃO VOLTAR AO INÍCIO
+========================================================= */
+
+.voltar-inicio {
+    position: fixed;
+
+    right: 25px;
+    top: 170px;
+
+    padding: 10px 16px;
+
+    background-color: var(--fundo-secundario);
+
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+
+    color: var(--texto-secundario);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+    z-index: 999;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.voltar-inicio:hover {
+    color: var(--texto);
+
+    background-color: var(--card);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BOTÃO NO CELULAR
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .voltar-inicio {
+        right: 15px;
+        top: 100px;
+
+        padding: 9px 13px;
+
+        font-size: 0.8rem;
+    }
+
+}
