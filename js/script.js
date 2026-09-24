@@ -97,40 +97,60 @@ if (elementosRevelaveis.length && !prefereMenosMovimento && 'IntersectionObserve
 }
 
 /* =========================================================
-   AMPLIAR GRÁFICOS NO DESKTOP
+   AMPLIAR GRÁFICOS (funciona em qualquer tamanho de tela)
 ========================================================= */
 const graficosExpansiveis = document.querySelectorAll('.grafico-resultado');
-const telaDesktop = window.matchMedia('(min-width: 801px)');
+const overlayGrafico = document.querySelector('#overlay-grafico');
 
 if (graficosExpansiveis.length) {
-    const alternarGrafico = (grafico) => {
-        if (!telaDesktop.matches) return;
-        const expandido = grafico.classList.toggle('expandido');
-        grafico.setAttribute('aria-expanded', expandido);
+    let graficoAtivo = null;
+
+    const fecharGrafico = () => {
+        if (!graficoAtivo) return;
+        graficoAtivo.classList.remove('expandido');
+        graficoAtivo.setAttribute('aria-expanded', 'false');
+        graficoAtivo = null;
+        if (overlayGrafico) overlayGrafico.classList.remove('ativo');
+        document.body.classList.remove('modal-imagem-aberta');
+    };
+
+    const abrirGrafico = (grafico) => {
+        if (graficoAtivo === grafico) {
+            fecharGrafico();
+            return;
+        }
+        fecharGrafico();
+        grafico.classList.add('expandido');
+        grafico.setAttribute('aria-expanded', 'true');
+        graficoAtivo = grafico;
+        if (overlayGrafico) overlayGrafico.classList.add('ativo');
+        document.body.classList.add('modal-imagem-aberta');
     };
 
     graficosExpansiveis.forEach(grafico => {
+        const imagem = grafico.querySelector('img');
+        const legenda = imagem ? imagem.getAttribute('alt') : '';
+
         grafico.setAttribute('tabindex', '0');
         grafico.setAttribute('role', 'button');
-        grafico.setAttribute('aria-label', 'Ampliar gráfico');
+        grafico.setAttribute('aria-label', `Ampliar gráfico: ${legenda}`);
         grafico.setAttribute('aria-expanded', 'false');
 
-        grafico.addEventListener('click', () => alternarGrafico(grafico));
+        grafico.addEventListener('click', () => abrirGrafico(grafico));
         grafico.addEventListener('keydown', (evento) => {
             if (evento.key === 'Enter' || evento.key === ' ') {
                 evento.preventDefault();
-                alternarGrafico(grafico);
+                abrirGrafico(grafico);
             }
         });
     });
 
+    if (overlayGrafico) {
+        overlayGrafico.addEventListener('click', fecharGrafico);
+    }
+
     document.addEventListener('keydown', (evento) => {
-        if (evento.key === 'Escape') {
-            graficosExpansiveis.forEach(grafico => {
-                grafico.classList.remove('expandido');
-                grafico.setAttribute('aria-expanded', 'false');
-            });
-        }
+        if (evento.key === 'Escape') fecharGrafico();
     });
 }
 
