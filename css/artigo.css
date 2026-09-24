@@ -1,0 +1,430 @@
+/* =========================================================
+   ARTIGO.CSS — Páginas de reportagem (estudantes.html
+   e professores.html). As duas páginas usam exatamente a
+   mesma estrutura visual, por isso compartilham este único
+   arquivo em vez de duas cópias quase idênticas.
+   Estilos gerais compartilhados com o resto do site estão
+   em base.css.
+========================================================= */
+@import url('base.css');
+
+/* =========================================================
+   CABEÇALHO DA MATÉRIA
+========================================================= */
+.artigo-header {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 7% 70px;
+    border-bottom: 1px solid var(--borda);
+}
+.artigo-header-conteudo {
+    max-width: 900px;
+}
+.categoria,
+.rotulo {
+    display: block;
+    color: var(--ods4);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.artigo-header h1 {
+    max-width: 900px;
+    margin: 20px 0 25px;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    letter-spacing: -2px;
+}
+.subtitulo {
+    max-width: 760px;
+    color: var(--texto-secundario);
+    font-size: 1.15rem;
+}
+/* =========================================================
+   ARTIGO
+========================================================= */
+.artigo {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 7%;
+}
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+.artigo-introducao {
+    max-width: 800px;
+    margin: auto;
+    padding: 70px 0;
+}
+.artigo-introducao p {
+    margin-bottom: 22px;
+    color: var(--texto);
+    font-size: 1.08rem;
+    text-align: justify;
+    hyphens: auto;
+}
+.artigo-introducao p:last-child {
+    margin-bottom: 0;
+}
+/* =========================================================
+   SEÇÕES DA MATÉRIA
+========================================================= */
+.artigo-secao {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 35px;
+    padding: 75px 0;
+}
+.numero-secao {
+    padding-top: 8px;
+    color: var(--ods3);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.conteudo-secao {
+    max-width: 800px;
+}
+.conteudo-secao .rotulo {
+    margin-bottom: 15px;
+}
+.conteudo-secao h2 {
+    margin-bottom: 30px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: -1px;
+}
+.conteudo-secao p {
+    margin-bottom: 22px;
+    color: var(--texto-secundario);
+    font-size: 1.03rem;
+    text-align: justify;
+    hyphens: auto;
+}
+.conteudo-secao strong {
+    color: var(--texto);
+    font-weight: 700;
+}
+.conteudo-secao em {
+    color: var(--texto);
+}
+/* =========================================================
+   DESTAQUE DE DADOS
+========================================================= */
+.destaque-dado {
+    margin: 45px 0;
+    padding: 30px 35px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--fundo-secundario);
+    border-left: 3px solid var(--ods4);
+}
+.destaque-dado strong {
+    flex-shrink: 0;
+    color: var(--ods4);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+.destaque-dado span {
+    max-width: 450px;
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+    text-align: left;
+}
+/* =========================================================
+   NOTA DO ESTUDO
+========================================================= */
+.nota-estudo {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borda);
+}
+.nota-estudo span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--texto-secundario);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+.nota-estudo p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+/* =========================================================
+   CITAÇÃO
+========================================================= */
+blockquote {
+    margin: 45px 0;
+    padding: 25px 30px;
+    border-left: 3px solid var(--ods3);
+    color: var(--texto);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+}
+/* =========================================================
+   SEPARADOR
+========================================================= */
+.separador {
+    width: 100%;
+    height: 1px;
+    background-color: var(--borda);
+}
+/* =========================================================
+   INTERVENÇÕES
+========================================================= */
+.intervencoes {
+    margin: 70px 0;
+    padding: 60px;
+    background-color: var(--fundo-secundario);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+}
+.intervencoes-header {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+.intervencoes-header h2 {
+    margin-top: 15px;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+.intervencoes-conteudo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--borda);
+    border-left: 1px solid var(--borda);
+}
+.intervencoes-conteudo > div {
+    padding: 30px;
+    border-right: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+}
+.intervencoes-conteudo span {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--ods4);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.intervencoes-conteudo h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+.intervencoes-conteudo p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    text-align: left;
+}
+/* =========================================================
+   CONCLUSÃO
+========================================================= */
+.artigo-conclusao {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 60px 0;
+    border-top: 2px solid var(--ods3);
+    border-bottom: 1px solid var(--borda);
+}
+.artigo-conclusao .rotulo {
+    color: var(--ods3);
+    margin-bottom: 20px;
+}
+.artigo-conclusao h2 {
+    margin-bottom: 30px;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    letter-spacing: -1px;
+}
+.artigo-conclusao p {
+    margin-bottom: 20px;
+    color: var(--texto-secundario);
+    font-size: 1rem;
+    text-align: justify;
+    hyphens: auto;
+}
+.artigo-conclusao p:last-child {
+    margin-bottom: 0;
+}
+/* =========================================================
+   CTA — RESPONDER À PESQUISA
+========================================================= */
+.cta-pesquisa {
+    max-width: 800px;
+    margin: 0 auto 100px;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--fundo-secundario);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+}
+.cta-pesquisa p {
+    max-width: 420px;
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+    text-align: left;
+}
+.cta-pesquisa h3 {
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+/* =========================================================
+   FONTES
+========================================================= */
+.fontes {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 0 100px;
+}
+.fontes-header {
+    margin-bottom: 40px;
+}
+.fontes-header h2 {
+    margin-top: 15px;
+    font-size: 2rem;
+}
+.fonte {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 20px;
+    padding: 25px 0;
+    border-top: 1px solid var(--borda);
+}
+.fonte > span {
+    color: var(--ods3);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.fonte h3 {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+.fonte p {
+    margin-bottom: 10px;
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    text-align: left;
+}
+.fonte a {
+    color: var(--ods4);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.fonte a:hover {
+    color: var(--texto);
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+@media (max-width: 800px) {
+    .artigo-header {
+        padding: 70px 7% 55px;
+    }
+    .artigo-header h1 {
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+    .subtitulo {
+        font-size: 1rem;
+    }
+    .artigo {
+        padding: 0 7%;
+    }
+    .artigo-introducao {
+        padding: 55px 0;
+    }
+    .artigo-secao {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 60px 0;
+    }
+    .numero-secao {
+        padding: 0;
+    }
+    .conteudo-secao h2 {
+        font-size: 2.2rem;
+    }
+    .destaque-dado {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+    }
+    .intervencoes {
+        margin: 50px 0;
+        padding: 35px 25px;
+    }
+    .intervencoes-conteudo {
+        grid-template-columns: 1fr;
+    }
+    .artigo-conclusao {
+        margin: 70px auto;
+        padding: 45px 0;
+    }
+    .artigo-conclusao h2 {
+        font-size: 2.3rem;
+    }
+    .cta-pesquisa {
+        padding: 30px;
+        justify-content: flex-start;
+    }
+    .fontes {
+        padding-bottom: 70px;
+    }
+}
+@media (max-width: 500px) {
+    .artigo-header {
+        padding: 55px 7% 45px;
+    }
+    .artigo-header h1 {
+        font-size: 2.4rem;
+    }
+    .artigo {
+        padding: 0 7%;
+    }
+    .artigo-introducao {
+        padding: 45px 0;
+    }
+    .artigo-introducao p {
+        font-size: 1rem;
+    }
+    .artigo-secao {
+        padding: 50px 0;
+    }
+    .conteudo-secao h2 {
+        font-size: 1.9rem;
+    }
+    .conteudo-secao p {
+        font-size: 0.95rem;
+    }
+    .destaque-dado strong {
+        font-size: 2.8rem;
+    }
+    .intervencoes {
+        padding: 30px 20px;
+    }
+    .intervencoes-header h2 {
+        font-size: 2rem;
+    }
+    .artigo-conclusao h2 {
+        font-size: 2rem;
+    }
+    .cta-pesquisa {
+        padding: 25px;
+    }
+    .fonte {
+        grid-template-columns: 35px 1fr;
+        gap: 10px;
+    }
+}

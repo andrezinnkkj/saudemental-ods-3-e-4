@@ -7,17 +7,38 @@
     <meta name="description"
         content="Uma análise sobre saúde mental dos estudantes, pressão acadêmica e estratégias de prevenção baseadas em evidências científicas.">
     <title>Estudantes | Saúde Mental na Educação</title>
-    <link rel="stylesheet" href="css/styleE.css">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%A0%3C/text%3E%3C/svg%3E">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Estudantes | Saúde Mental na Educação">
+    <meta property="og:description"
+        content="Uma análise sobre saúde mental dos estudantes, pressão acadêmica e estratégias de prevenção baseadas em evidências científicas.">
+    <meta property="og:image" content="assets/Logos/logo-site.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Estudantes | Saúde Mental na Educação">
+    <meta name="twitter:description"
+        content="Uma análise sobre saúde mental dos estudantes, pressão acadêmica e estratégias de prevenção baseadas em evidências científicas.">
+    <meta name="twitter:image" content="assets/Logos/logo-site.png">
+    <link rel="stylesheet" href="css/artigo.css">
 </head>
 
 <body>
+    <!-- BARRA DE PROGRESSO DE LEITURA -->
+    <div class="barra-progresso" id="barra-progresso"></div>
     <!-- HEADER -->
     <header>
         <nav>
-            <a href="index.html" aria-label="Voltar ao início">
-                <img src="assets/Logos/Logo - site.png" alt="Logo do projeto">
+            <a href="index.html" class="logo" aria-label="Ir para a página inicial">
+                <picture>
+                    <source srcset="assets/Logos/logo-site.webp" type="image/webp">
+                    <img src="assets/Logos/logo-site.png" alt="Logo do projeto" width="900" height="279">
+                </picture>
             </a>
             <ul id="menu-principal">
+                <li>
+                    <a href="index.html">Página inicial</a>
+                </li>
                 <li>
                     <a href="pesquisa.html">Pesquisa</a>
                 </li>
@@ -73,7 +94,7 @@
                 </p>
             </div>
             <!-- SEÇÃO 01 -->
-            <section class="artigo-secao">
+            <section class="artigo-secao" data-reveal>
                 <div class="numero-secao">
                     01
                 </div>
@@ -95,7 +116,7 @@
                         <strong>52 estudos</strong> sobre a relação entre pressão
                         acadêmica e problemas de saúde mental em adolescentes.
                     </p>
-                    <div class="destaque-dado">
+                    <div class="destaque-dado" data-reveal>
                         <strong>48 de 52</strong>
                         <span>
                             estudos encontraram uma associação entre pressão
@@ -130,7 +151,7 @@
             <!-- SEPARADOR -->
             <div class="separador"></div>
             <!-- SEÇÃO 02 -->
-            <section class="artigo-secao">
+            <section class="artigo-secao" data-reveal>
                 <div class="numero-secao">
                     02
                 </div>
@@ -181,7 +202,7 @@
             <!-- SEPARADOR -->
             <div class="separador"></div>
             <!-- SEÇÃO 03 -->
-            <section class="artigo-secao">
+            <section class="artigo-secao" data-reveal>
                 <div class="numero-secao">
                     03
                 </div>
@@ -203,7 +224,7 @@
                         2021 reuniu <strong>118 ensaios clínicos randomizados</strong>,
                         envolvendo <strong>45.924 participantes</strong>.
                     </p>
-                    <div class="destaque-dado">
+                    <div class="destaque-dado" data-reveal>
                         <strong>45.924</strong>
                         <span>
                             estudantes participaram dos estudos analisados
@@ -232,7 +253,7 @@
             <!-- SEPARADOR -->
             <div class="separador"></div>
             <!-- SEÇÃO 04 -->
-            <section class="artigo-secao">
+            <section class="artigo-secao" data-reveal>
                 <div class="numero-secao">
                     04
                 </div>
@@ -261,7 +282,7 @@
                         cognitivo-comportamental, além de programas conduzidos
                         por profissionais especializados.
                     </p>
-                    <div class="destaque-dado">
+                    <div class="destaque-dado" data-reveal>
                         <strong>22.420</strong>
                         <span>
                             estudantes fizeram parte dos estudos analisados
@@ -287,7 +308,7 @@
                         O que a escola pode fazer?
                     </h2>
                 </div>
-                <div class="intervencoes-conteudo">
+                <div class="intervencoes-conteudo" data-reveal-group>
                     <div>
                         <span>01</span>
                         <h3>
@@ -331,7 +352,7 @@
                 </div>
             </section>
             <!-- CONCLUSÃO -->
-            <section class="artigo-conclusao">
+            <section class="artigo-conclusao" data-reveal>
                 <span class="rotulo">
                     CONCLUSÃO
                 </span>
@@ -357,8 +378,22 @@
                     do desenvolvimento integral dos estudantes.
                 </p>
             </section>
+            <!-- CTA -->
+            <div class="cta-pesquisa" data-reveal>
+                <div>
+                    <h3>Sua opinião também importa</h3>
+                    <p>
+                        Estamos coletando respostas de estudantes para
+                        entender melhor essa realidade em nossa escola.
+                    </p>
+                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSenednMfHTSKgzez7a-b7bCZ8WXiZFSbiVUkIs9mBLbQMeDcw/viewform"
+                    target="_blank" rel="noopener noreferrer" class="btn">
+                    Responda à pesquisa
+                </a>
+            </div>
             <!-- FONTES -->
-            <section class="fontes">
+            <section class="fontes" data-reveal-group>
                 <div class="fontes-header">
                     <span class="rotulo">
                         REFERÊNCIAS
@@ -450,10 +485,15 @@
             &copy; 2026 — Projeto de conscientização sobre saúde mental na educação.
         </p>
     </footer>
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button class="voltar-topo" type="button" aria-label="Voltar ao topo da página">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
     <script src="js/script.js"></script>
-    <a href="index.html" class="voltar-inicio">
-        ← Voltar ao início
-    </a>
 </body>
 
 </html>

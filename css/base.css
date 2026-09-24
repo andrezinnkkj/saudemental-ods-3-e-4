@@ -1,0 +1,380 @@
+/* =========================================================
+   BASE.CSS
+   Estilos compartilhados por todas as páginas do site
+   (variáveis, reset, header, menu, footer, botões,
+   barra de progresso, botão "voltar ao topo" e animações
+   de entrada). Cada CSS de página importa este arquivo
+   e adiciona apenas os estilos específicos daquela página.
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+:root {
+    --fundo: #121A18;
+    --fundo-secundario: #1B2722;
+    --card: #24312B;
+    --texto: #F1F3EF;
+    --texto-secundario: #B7C1BA;
+    --ods3: #C6192D;
+    --ods4: #4C9F38;
+    --borda: #34423B;
+    --raio: 16px;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    text-align: left;
+}
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    text-align: left;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    font-family: inherit;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Respeita quem prefere menos movimento na tela */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+/* =========================================================
+   BARRA DE PROGRESSO DE LEITURA
+========================================================= */
+.barra-progresso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--ods4);
+    z-index: 1000;
+    transition: width 0.1s linear;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+header {
+    width: 100%;
+    padding: 20px 7%;
+    background-color: rgba(18, 26, 24, 0.92);
+    border-bottom: 1px solid var(--borda);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: block;
+}
+header img {
+    width: 200px;
+    display: block;
+}
+/* =========================================================
+   MENU DESKTOP
+========================================================= */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+nav li a {
+    color: var(--texto-secundario);
+    font-weight: 500;
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+nav li a:hover {
+    color: var(--texto);
+}
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+.menu-mobile {
+    display: none;
+}
+
+/* =========================================================
+   BOTÃO PRIMÁRIO (CTA)
+========================================================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--ods4);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 8px 25px rgba(76, 159, 56, 0.2);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+    padding: 35px 7%;
+    background-color: #0D1311;
+    border-top: 1px solid var(--borda);
+}
+footer p {
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+}
+
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+========================================================= */
+.voltar-topo {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 50%;
+    color: var(--texto);
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s,
+        background-color 0.3s ease;
+}
+.voltar-topo svg {
+    width: 18px;
+    height: 18px;
+}
+.voltar-topo.mostrar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.voltar-topo:hover {
+    background-color: var(--fundo-secundario);
+}
+
+/* =========================================================
+   ANIMAÇÕES DE ENTRADA AO ROLAR A PÁGINA
+========================================================= */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+[data-reveal].is-visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Efeito em cascata para grupos de itens (cards, colunas) */
+[data-reveal-group] > * {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+[data-reveal-group].is-visivel > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+[data-reveal-group].is-visivel > *:nth-child(1) { transition-delay: 0s; }
+[data-reveal-group].is-visivel > *:nth-child(2) { transition-delay: 0.1s; }
+[data-reveal-group].is-visivel > *:nth-child(3) { transition-delay: 0.2s; }
+[data-reveal-group].is-visivel > *:nth-child(4) { transition-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+    [data-reveal],
+    [data-reveal-group] > * {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* =========================================================
+   RESPONSIVIDADE — HEADER / MENU (todas as páginas)
+========================================================= */
+@media (max-width: 800px) {
+    header {
+        padding: 18px 7%;
+        position: static;
+        backdrop-filter: none;
+    }
+    nav {
+        justify-content: space-between;
+    }
+    header img {
+        width: 180px;
+    }
+    .menu-mobile {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        background-color: var(--card);
+        border: 1px solid var(--borda);
+        border-radius: 10px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+    .menu-mobile span {
+        position: absolute;
+        width: 24px;
+        height: 3px;
+        background-color: var(--texto);
+        border-radius: 5px;
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+    .menu-mobile span:nth-child(1) {
+        transform: translateY(-7px);
+    }
+    .menu-mobile span:nth-child(2) {
+        transform: translateY(0);
+    }
+    .menu-mobile span:nth-child(3) {
+        transform: translateY(7px);
+    }
+    .menu-mobile.menu-aberto span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .menu-mobile.menu-aberto span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-mobile.menu-aberto span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    nav ul {
+        position: fixed;
+        top: 85px;
+        right: 20px;
+        width: 250px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        background-color: var(--fundo-secundario);
+        border: 1px solid var(--borda);
+        border-radius: 12px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0.3s;
+        z-index: 9998;
+    }
+    nav ul.menu-aberto {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    /* Itens do menu aparecem em cascata (stagger) ao abrir */
+    nav ul li {
+        opacity: 0;
+        transform: translateX(12px);
+        transition:
+            opacity 0.25s ease,
+            transform 0.25s ease;
+    }
+    nav ul.menu-aberto li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    nav ul.menu-aberto li:nth-child(1) { transition-delay: 0.05s; }
+    nav ul.menu-aberto li:nth-child(2) { transition-delay: 0.1s; }
+    nav ul.menu-aberto li:nth-child(3) { transition-delay: 0.15s; }
+
+    .voltar-topo {
+        left: 16px;
+        bottom: 16px;
+        width: 42px;
+        height: 42px;
+    }
+}
+@media (max-width: 500px) {
+    header {
+        padding: 15px 5%;
+    }
+    header img {
+        width: 170px;
+    }
+    footer {
+        padding: 30px 7%;
+    }
+}

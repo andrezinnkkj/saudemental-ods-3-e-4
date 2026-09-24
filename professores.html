@@ -7,17 +7,38 @@
     <meta name="description"
         content="Uma análise sobre saúde mental dos professores, estresse ocupacional, burnout e estratégias de prevenção.">
     <title>Professores | Saúde Mental na Educação</title>
-    <link rel="stylesheet" href="css/stylePr.css">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%A0%3C/text%3E%3C/svg%3E">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Professores | Saúde Mental na Educação">
+    <meta property="og:description"
+        content="Uma análise sobre saúde mental dos professores, estresse ocupacional, burnout e estratégias de prevenção.">
+    <meta property="og:image" content="assets/Logos/logo-site.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Professores | Saúde Mental na Educação">
+    <meta name="twitter:description"
+        content="Uma análise sobre saúde mental dos professores, estresse ocupacional, burnout e estratégias de prevenção.">
+    <meta name="twitter:image" content="assets/Logos/logo-site.png">
+    <link rel="stylesheet" href="css/artigo.css">
 </head>
 
 <body>
+    <!-- BARRA DE PROGRESSO DE LEITURA -->
+    <div class="barra-progresso" id="barra-progresso"></div>
     <!-- HEADER -->
     <header>
         <nav>
-            <a href="index.html" aria-label="Voltar ao início">
-                <img src="assets/Logos/Logo - site.png" alt="Logo do projeto">
+            <a href="index.html" class="logo" aria-label="Ir para a página inicial">
+                <picture>
+                    <source srcset="assets/Logos/logo-site.webp" type="image/webp">
+                    <img src="assets/Logos/logo-site.png" alt="Logo do projeto" width="900" height="279">
+                </picture>
             </a>
             <ul id="menu-principal">
+                <li>
+                    <a href="index.html">Página inicial</a>
+                </li>
                 <li>
                     <a href="pesquisa.html">Pesquisa</a>
                 </li>
@@ -75,7 +96,7 @@
                 </p>
             </div>
             <!-- SEÇÃO 01 -->
-            <section class="artigo-secao">
+            <section class="artigo-secao" data-reveal>
                 <div class="numero-secao">
                     01
                 </div>
@@ -105,7 +126,7 @@
                         pessoais, competências socioemocionais, respostas às
                         condições de trabalho e relações profissionais.
                     </p>
-                    <div class="destaque-dado">
+                    <div class="destaque-dado" data-reveal>
                         <strong>38</strong>
                         <span>
                             estudos foram analisados em uma revisão sobre os
@@ -135,7 +156,7 @@
             <!-- SEPARADOR -->
             <div class="separador"></div>
             <!-- SEÇÃO 02 -->
-            <section class="artigo-secao">
+            <section class="artigo-secao" data-reveal>
                 <div class="numero-secao">
                     02
                 </div>
@@ -163,7 +184,7 @@
                         pesquisas, devido às diferenças entre instrumentos,
                         amostras e critérios utilizados.
                     </p>
-                    <div class="destaque-dado">
+                    <div class="destaque-dado" data-reveal>
                         <strong>21–69%</strong>
                         <span>
                             foi a faixa de prevalência de alta exaustão emocional
@@ -192,7 +213,7 @@
             <!-- SEPARADOR -->
             <div class="separador"></div>
             <!-- SEÇÃO 03 -->
-            <section class="artigo-secao">
+            <section class="artigo-secao" data-reveal>
                 <div class="numero-secao">
                     03
                 </div>
@@ -235,7 +256,7 @@
             <!-- SEPARADOR -->
             <div class="separador"></div>
             <!-- SEÇÃO 04 -->
-            <section class="artigo-secao">
+            <section class="artigo-secao" data-reveal>
                 <div class="numero-secao">
                     04
                 </div>
@@ -257,7 +278,7 @@
                         voltados à saúde mental, ao burnout profissional e ao
                         bem-estar de professores.
                     </p>
-                    <div class="destaque-dado">
+                    <div class="destaque-dado" data-reveal>
                         <strong>88</strong>
                         <span>
                             estudos foram identificados na revisão sobre
@@ -296,7 +317,7 @@
                         Como a escola pode contribuir?
                     </h2>
                 </div>
-                <div class="intervencoes-conteudo">
+                <div class="intervencoes-conteudo" data-reveal-group>
                     <div>
                         <span>01</span>
                         <h3>
@@ -343,7 +364,7 @@
                 </div>
             </section>
             <!-- CONCLUSÃO -->
-            <section class="artigo-conclusao">
+            <section class="artigo-conclusao" data-reveal>
                 <span class="rotulo">
                     CONCLUSÃO
                 </span>
@@ -371,8 +392,22 @@
                     dos dois lados da educação.
                 </p>
             </section>
+            <!-- CTA -->
+            <div class="cta-pesquisa" data-reveal>
+                <div>
+                    <h3>Sua opinião também importa</h3>
+                    <p>
+                        Estamos coletando respostas de professores para
+                        entender melhor essa realidade em nossa escola.
+                    </p>
+                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSenednMfHTSKgzez7a-b7bCZ8WXiZFSbiVUkIs9mBLbQMeDcw/viewform"
+                    target="_blank" rel="noopener noreferrer" class="btn">
+                    Responda à pesquisa
+                </a>
+            </div>
             <!-- FONTES -->
-            <section class="fontes">
+            <section class="fontes" data-reveal-group>
                 <div class="fontes-header">
                     <span class="rotulo">
                         REFERÊNCIAS
@@ -489,10 +524,15 @@
             &copy; 2026 — Projeto de conscientização sobre saúde mental na educação.
         </p>
     </footer>
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button class="voltar-topo" type="button" aria-label="Voltar ao topo da página">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
     <script src="js/script.js"></script>
-    <a href="index.html" class="voltar-inicio">
-        ← Voltar ao início
-    </a>
 </body>
 
 </html>
