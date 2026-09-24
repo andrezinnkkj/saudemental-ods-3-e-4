@@ -97,6 +97,44 @@ if (elementosRevelaveis.length && !prefereMenosMovimento && 'IntersectionObserve
 }
 
 /* =========================================================
+   AMPLIAR GRÁFICOS NO DESKTOP
+========================================================= */
+const graficosExpansiveis = document.querySelectorAll('.grafico-resultado');
+const telaDesktop = window.matchMedia('(min-width: 801px)');
+
+if (graficosExpansiveis.length) {
+    const alternarGrafico = (grafico) => {
+        if (!telaDesktop.matches) return;
+        const expandido = grafico.classList.toggle('expandido');
+        grafico.setAttribute('aria-expanded', expandido);
+    };
+
+    graficosExpansiveis.forEach(grafico => {
+        grafico.setAttribute('tabindex', '0');
+        grafico.setAttribute('role', 'button');
+        grafico.setAttribute('aria-label', 'Ampliar gráfico');
+        grafico.setAttribute('aria-expanded', 'false');
+
+        grafico.addEventListener('click', () => alternarGrafico(grafico));
+        grafico.addEventListener('keydown', (evento) => {
+            if (evento.key === 'Enter' || evento.key === ' ') {
+                evento.preventDefault();
+                alternarGrafico(grafico);
+            }
+        });
+    });
+
+    document.addEventListener('keydown', (evento) => {
+        if (evento.key === 'Escape') {
+            graficosExpansiveis.forEach(grafico => {
+                grafico.classList.remove('expandido');
+                grafico.setAttribute('aria-expanded', 'false');
+            });
+        }
+    });
+}
+
+/* =========================================================
    CONTADOR ANIMADO NOS DADOS EM DESTAQUE
    Anima qualquer número presente no texto (ex: "48", "88",
    "21–69%"), preservando o restante do texto original.
